@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav style="background-color: red;height: 60px;"></nav>
+    <div class="container mt-5">
+        
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                
+                <a href="{% url 'admin-dashboard' %}" style="font-size: 20px;"><i class='bx bx-left-arrow-alt mb-3'>Back</i></a>
+                <div class="section p-5" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
+                <h4>Name: <span style="font-weight: lighter;padding-left: 30px;">{{item.name}}</span></h4>
+                <h5>Email: <span style="font-weight: lighter;padding-left: 30px;">{{item.email}}</span></h5>
+                <h5>Contact: <span style="font-weight: lighter;padding-left: 30px;">{{item.contact}}</span></h5>
+                <h6 class="mt-5">Feedback</h6>
+                <p>{{item.feedback}}</p>
+                <h6 class="mt-5">Challenges</h6>
+                <p>{{item.challenges}}</p>
+                <h6 class="mt-5">Improvements</h6>
+                <p>{{item.improvements}}</p>
+                <h6 class="mt-5">Comments</h6>
+                <p>{{item.comments}}</p>
+            </div>
+        </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+</body>
+</html>
